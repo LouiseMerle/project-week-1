@@ -4,12 +4,27 @@ import re
 
 #define variables
 
+'''
+L.S. Very nice piece of code! Well done! The structure is clear and the general outline looks good. 
+Minor improvement could be to add some comments. 
+
+You also cleverly otained a list of words from the internet. A good practice in finding and retrieving data!
+'''
+
+'''
+L.S. You can maybe add an ascii range function so that you don't have type all the letters yourself. 
+'''
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 guess_list = []
 
 letter_choices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+
+'''
+L.S. Nice Function! 
+'''
 
 #defining functions 
 
@@ -30,6 +45,7 @@ def random_word():
 
     return random_list
 
+
 def guess(input_human, random_list, guess_list):
     index = 0
     for letter in random_list:
@@ -47,7 +63,15 @@ while True:
 
     guess_list = []
 
+    '''
+    L.S. Here you could have made a copy of the alphabet list, saves some typing. 
+    '''
+
     letter_choices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    '''
+    L.S. Good!
+    '''
 
     print("Hi, welcome", name, "what a great day to play hangman!")
     
@@ -68,6 +92,12 @@ while True:
         print('')
         human_choice = input("Which letter do you want to choose? ")
         print('')
+
+
+        '''
+        L.S. Yes, very good!
+        '''
+
         if human_choice in alphabet:
             if human_choice in letter_choices:
                 letter_choices.remove(human_choice)
@@ -88,6 +118,10 @@ while True:
 
     if turns == 0:
         print("You lost!, the word was: ", secret_word)
+
+    '''
+    L.S. Yes, very good to ask the user whether he/she wants to play a second time. 
+    '''
 
     while True:
         answer = input('Run again? (y/n): ')
